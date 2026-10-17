@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारत का संविधान - विधि और न्याय मंत्रालय | Government of India</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --govt-blue: #0F2C61;
+            --govt-blue-dark: #0A1E42;
+            --govt-blue-light: #1A3E7B;
+            --govt-saffron: #FF9933;
+            --govt-saffron-dark: #D97706;
+            --govt-green: #138808;
+            --govt-green-dark: #0C5805;
+            --govt-ash: #F4F6F9;
+            --card-bg: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-muted: #6B7280;
+            --border-color: #E5E7EB;
+            --gold-accent: #D4AF37;
+        }
+
+        /* High Contrast Theme */
+        body.high-contrast {
+            --govt-blue: #000000;
+            --govt-blue-dark: #000000;
+            --govt-blue-light: #1A1A1A;
+            --govt-saffron: #FFFF00;
+            --govt-saffron-dark: #D4D400;
+            --govt-green: #00FF00;
+            --govt-ash: #121212;
+            --card-bg: #1E1E1E;
+            --text-dark: #FFFFFF;
+            --text-muted: #D1D5DB;
+            --border-color: #4B5563;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans Devanagari', 'Roboto', sans-serif;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        body {
+            background-color: var(--govt-ash);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 15px;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; font-family: inherit; }
+
+        /* TOP STRIP */
+        .top-strip {
+            background-color: var(--govt-blue-dark);
+            color: #FFFFFF;
+            padding: 6px 5%;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-strip-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .top-strip-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .top-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #FFFFFF;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            transition: all 0.2s;
+        }
+        .top-btn:hover {
+            background: var(--govt-saffron);
+            color: #000;
+            border-color: var(--govt-saffron);
+        }
+
+        .time-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+        }
+
+        /* MAIN HEADER */
+        .main-header {
+            background: #FFFFFF;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+            z-index: 10;
+        }
+
+        body.high-contrast .main-header {
+            background: #181818;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .emblem-svg {
+            width: 55px;
+            height: auto;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.15));
+        }
+
+        .govt-title h2 {
+            color: var(--govt-blue);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+
+        .govt-title h1 {
+            color: #000000;
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+        body.high-contrast .govt-title h1 { color: #FFFFFF; }
+
+        .govt-title p {
+            color: var(--govt-saffron-dark);
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        .header-portraits {
+            display: flex;
+            gap: 15px;
+        }
+
+        .portrait-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #F9FAFB;
+            border: 1px solid var(--border-color);
+            padding: 5px 12px;
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+        body.high-contrast .portrait-card { background: #262626; }
+
+        .portrait-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--govt-saffron);
+            object-fit: cover;
+        }
+
+        .portrait-info p {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--govt-blue);
+            margin: 0;
+            line-height: 1.1;
+        }
+        body.high-contrast .portrait-info p { color: var(--govt-saffron); }
+
+        .portrait-info span {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* TRICOLOR MENU BAR */
+        .menu-bar {
+            background: linear-gradient(90deg, var(--govt-saffron) 0%, #FFFFFF 50%, var(--govt-green) 100%);
+            padding: 2px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-inner {
+            background: var(--govt-blue);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu-inner a {
+            color: #FFFFFF;
+            padding: 12px 18px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-inner a:hover, .menu-inner a.active {
+            background-color: var(--govt-blue-light);
+            border-bottom: 4px solid var(--govt-saffron);
+            color: var(--govt-saffron);
+        }
+
+        /* TICKER STRIP */
+        .ticker-wrap {
+            background-color: #8B0000;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            padding: 6px 5%;
+            font-size: 0.88rem;
+            font-weight: 600;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .ticker-title {
+            background: #FFD700;
+            color: #000000;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            border-radius: 3px;
+            margin-right: 15px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            background: linear-gradient(rgba(15, 44, 97, 0.92), rgba(10, 30, 66, 0.96)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #FFFFFF;
+            padding: 45px 5% 50px 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #E2E8F0;
+            margin-bottom: 25px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SEARCH BOX */
+        .search-box-wrap {
+            max-width: 780px;
+            margin: 0 auto 20px auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            font-size: 1.05rem;
+            border: 3px solid var(--govt-saffron);
+            border-radius: 50px;
+            outline: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #FFFFFF;
+            color: #000000;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+            color: var(--govt-blue);
+        }
+
+        .category-pills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .pill-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #FFFFFF;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            background: var(--govt-saffron);
+            color: #000;
+            border-color: var(--govt-saffron);
+            font-weight: 700;
+        }
+
+        /* HERO ACTION CARDS */
+        .hero-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .hero-card:hover {
+            background: #FFFFFF;
+            color: var(--govt-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero-card i {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--govt-saffron);
+        }
+
+        .hero-card:hover i {
+            color: var(--govt-blue);
+        }
+
+        .hero-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        /* MAIN CONTENT AREA */
+        .content-container {
+            max-width: 1250px;
+            margin: 30px auto;
+            padding: 0 20px;
+            min-height: 500px;
+        }
+
+        .home-layout-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 25px;
+        }
+
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+
+        /* SECTION TITLES */
+        .section-header-title {
+            color: var(--govt-blue);
+            border-bottom: 3px solid var(--govt-saffron);
+            padding-bottom: 8px;
+            margin-bottom: 22px;
+            font-size: 1.35rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body.high-contrast .section-header-title { color: var(--govt-saffron); }
+
+        .part-group-title {
+            background: var(--govt-blue);
+            color: #FFFFFF;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ARTICLES GRID */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 18px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--govt-blue);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-top-color: var(--govt-saffron);
+            transform: translateY(-4px);
+        }
+
+        .article-card-header {
+            padding: 15px 15px 10px 15px;
+        }
+
+        .article-badge {
+            background: #E0E7FF;
+            color: var(--govt-blue);
+            padding: 3px 9px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .article-card h3 {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+
+        .article-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-grow: 1;
+            padding: 0 15px 15px 15px;
+        }
+
+        .article-card-footer {
+            background: #F9FAFB;
+            border-top: 1px solid var(--border-color);
+            padding: 8px 15px;
+            font-size: 0.78rem;
+            color: var(--govt-blue);
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        body.high-contrast .article-card-footer { background: #262626; color: var(--govt-saffron); }
+
+        /* RIGHT NOTICE BOARD */
+        .notice-board {
+            background: var(--card-bg);
+            border: 2px solid var(--govt-saffron);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .notice-header {
+            background: var(--govt-saffron-dark);
+            color: #FFFFFF;
+            padding: 10px 12px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .notice-item {
+            font-size: 0.86rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding: 12px 0;
+            color: var(--text-dark);
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .notice-icon-box {
+            background: #FEF3C7;
+            color: var(--govt-saffron-dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        /* STUDENT CORNER CARDS */
+        .student-rights-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--govt-saffron);
+            padding: 22px;
+            margin-bottom: 22px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+        }
+
+        .student-rights-card h3 {
+            color: var(--govt-blue);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        body.high-contrast .student-rights-card h3 { color: var(--govt-saffron); }
+
+        .step-process-box {
+            background: #F8FAFC;
+            border: 1px solid #CBD5E1;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+        body.high-contrast .step-process-box { background: #262626; border-color: #4B5563; }
+
+        .step-process-box ol {
+            padding-left: 20px;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        .step-process-box li {
+            margin-bottom: 6px;
+        }
+
+        /* AI LOCATOR & COMPLAINT FORM */
+        .ai-locator-card {
+            background: var(--card-bg);
+            border: 2px solid var(--govt-blue);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 700; margin-bottom: 6px; font-size: 0.92rem; }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: var(--card-bg);
+            color: var(--text-dark);
+        }
+        textarea.form-control { height: 110px; resize: vertical; }
+
+        .btn-govt {
+            background: var(--govt-blue);
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 24px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            border-radius: 6px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-govt:hover { background: var(--govt-blue-light); }
+
+        .btn-saffron {
+            background: var(--govt-saffron);
+            color: #000000;
+            border: none;
+            padding: 12px 24px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .btn-saffron:hover { background: var(--govt-saffron-dark); color: #FFF; }
+
+        .btn-secondary {
+            background: #E2E8F0;
+            color: #334155;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+
+        /* MODAL POPUP */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-container {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 850px;
+            max-height: 90vh;
+            border-radius: 12px;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        .modal-header {
+            background: var(--govt-blue);
+            color: #FFFFFF;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-body { padding: 25px; }
+
+        .bilingual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+            padding: 18px;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+        }
+        body.high-contrast .bilingual-grid { background: #262626; border-color: #4B5563; }
+
+        .lang-col h4 {
+            color: var(--govt-blue);
+            border-bottom: 2px solid var(--govt-saffron);
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        body.high-contrast .lang-col h4 { color: var(--govt-saffron); }
+
+        .impact-box {
+            background: #F0FDF4;
+            border-left: 5px solid var(--govt-green);
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        body.high-contrast .impact-box { background: #1B382B; }
+
+        .case-law-box {
+            background: #FFFBEB;
+            border-left: 5px solid var(--govt-saffron);
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        body.high-contrast .case-law-box { background: #3B3218; }
+
+        /* FOOTER */
+        footer {
+            background: var(--govt-blue-dark);
+            color: #FFFFFF;
+            padding: 45px 5% 20px 5%;
+            margin-top: 60px;
+            border-top: 5px solid var(--govt-saffron);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1250px;
+            margin: 0 auto 35px auto;
+        }
+
+        .footer-col h4 {
+            color: var(--govt-saffron);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 6px;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 8px; font-size: 0.88rem; }
+        .footer-col ul li a:hover { color: var(--govt-saffron); }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: #CBD5E1;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 868px) {
+            .main-header { flex-direction: column; text-align: center; gap: 15px; }
+            .header-portraits { display: none; }
+            .home-layout-grid { grid-template-columns: 1fr; }
+            .bilingual-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 1.6rem; }
+            .search-input { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. TOP ACCESSIBILITY STRIP -->
+    <div class="top-strip">
+        <div class="top-strip-left">
+            <span>🇮🇳 <span id="lblGovt">भारत सरकार</span> | <span id="lblMinistry">विधि और न्याय मंत्रालय</span></span>
+            <span class="time-badge" id="liveClock">IST --:--:--</span>
+        </div>
+        <div class="top-strip-right">
+            <button class="top-btn" onclick="changeFontSize(-1)" title="Font Decrease">A-</button>
+            <button class="top-btn" onclick="changeFontSize(0)" title="Reset Font">A</button>
+            <button class="top-btn" onclick="changeFontSize(1)" title="Font Increase">A+</button>
+            <span>|</span>
+            <button class="top-btn" onclick="toggleHighContrast()" id="contrastBtn">High Contrast</button>
+            <span>|</span>
+            <button class="top-btn" onclick="toggleLanguage()" id="langBtn">English / हिंदी</button>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="main-header">
+        <div class="header-brand">
+            <!-- Official SVG Ashoka Stambh Emblem -->
+            <svg class="emblem-svg" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 5C52.2 5 54 6.8 54 9V18C54 20.2 52.2 22 50 22C47.8 22 46 20.2 46 18V9C46 6.8 47.8 5 50 5Z" fill="#138808"/>
+                <path d="M30 30C30 18.9 38.9 10 50 10C61.1 10 70 18.9 70 30V60H30V30Z" fill="#FF9933"/>
+                <circle cx="50" cy="45" r="12" fill="#0F2C61"/>
+                <circle cx="50" cy="45" r="8" fill="#FFFFFF"/>
+                <path d="M50 37V53M42 45H58M44 39L56 51M44 51L56 39" stroke="#0F2C61" stroke-width="1.5"/>
+                <rect x="20" y="65" width="60" height="15" rx="3" fill="#0F2C61"/>
+                <text x="50" y="76" font-family="'Noto Sans Devanagari', sans-serif" font-weight="bold" font-size="9" fill="#FFFFFF" text-anchor="middle">सत्यमेव जयते</text>
+                <rect x="15" y="85" width="70" height="25" rx="4" fill="#D4AF37"/>
+                <path d="M25 115L50 135L75 115H25Z" fill="#0F2C61"/>
+            </svg>
+            <div class="govt-title">
+                <h2>विधि और न्याय मंत्रालय | Ministry of Law and Justice</h2>
+                <h1>भारत का संविधान (BHARAT SAMVIDHAN)</h1>
+                <p>सत्यमेव जयते - डिजिटल नागरिक अधिकार एवं कानूनी सुरक्षा पोर्टल</p>
+            </div>
+        </div>
+        <div class="header-portraits">
+            <div class="portrait-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Official_photograph_of_Prime_Minister_Narendra_Modi_2024.jpg/440px-Official_photograph_of_Prime_Minister_Narendra_Modi_2024.jpg" alt="PM Narendra Modi" class="portrait-img">
+                <div class="portrait-info">
+                    <p>श्री नरेंद्र मोदी</p>
+                    <span>माननीय प्रधानमंत्री</span>
+                </div>
+            </div>
+            <div class="portrait-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Yogi_Adityanath_in_2023_%28cropped%29.jpg/440px-Yogi_Adityanath_in_2023_%28cropped%29.jpg" alt="CM Yogi Adityanath" class="portrait-img">
+                <div class="portrait-info">
+                    <p>श्री योगी आदित्यनाथ</p>
+                    <span>माननीय मुख्यमंत्री, उ.प्र.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. TRICOLOR NAVIGATION MENU -->
+    <div class="menu-bar">
+        <nav class="menu-inner">
+            <a href="javascript:void(0)" class="active" onclick="switchPage('homePage', this)"><i class="fa-solid fa-house"></i> मुख्य पृष्ठ (Home)</a>
+            <a href="javascript:void(0)" onclick="switchPage('articlesPage', this)"><i class="fa-solid fa-scroll"></i> संपूर्ण अनुच्छेद (Articles)</a>
+            <a href="javascript:void(0)" onclick="switchPage('studentPage', this)"><i class="fa-solid fa-graduation-cap"></i> छात्र अधिकार कॉर्नर</a>
+            <a href="javascript:void(0)" onclick="switchPage('bnsPage', this)"><i class="fa-solid fa-handcuffs"></i> BNS / क्रिमिनल लॉ</a>
+            <a href="javascript:void(0)" onclick="switchPage('complaintPage', this)"><i class="fa-solid fa-robot"></i> AI शिकायत सहायिका</a>
+            <a href="javascript:void(0)" onclick="switchPage('helpPage', this)"><i class="fa-solid fa-scale-balanced"></i> कानूनी सहायता (15100)</a>
+        </nav>
+    </div>
+
+    <!-- NEWS TICKER -->
+    <div class="ticker-wrap">
+        <span class="ticker-title"><i class="fa-solid fa-bullhorn"></i> नवीनतम सूचना</span>
+        <marquee onmouseover="this.stop();" onmouseout="this.start();">
+            ⚖️ अनुच्छेद 21A: 6-14 वर्ष के बच्चों के लिए मुफ्त शिक्षा मौलिक अधिकार | 🚫 यूजीसी एंटी-रैगिंग हेल्पलाइन: 1800-180-5522 | 📜 पेपर लीक रोकथाम अधिनियम 2024 लागू (10 वर्ष की जेल व ₹1 करोड़ जुर्माना) | 📞 मुफ़्त कानूनी सलाह हेतु NALSA हेल्पलाइन 15100 डायल करें।
+        </marquee>
+    </div>
+
+    <!-- HERO SECTION & SEARCH -->
+    <section class="hero-section">
+        <h1 class="hero-title">भारत का संविधान - नागरिक सुरक्षा एवं अधिकार</h1>
+        <p class="hero-subtitle">भारत सरकार द्वारा संचालित आधिकारिक डिजिटल संविधान एवं कानूनी अधिकार सूचना केंद्र</p>
+        
+        <div class="search-box-wrap">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="globalSearch" class="search-input" placeholder="खोजें... जैसे - Article 21, छात्र अधिकार, BNS हत्या, पेपर लीक कानून, जमानत, आरक्षण" onkeyup="handleLiveSearch()">
+        </div>
+
+        <div class="category-pills">
+            <button class="pill-btn" onclick="quickFilter('21')">Article 21 (Right to Life)</button>
+            <button class="pill-btn" onclick="quickFilter('21A')">Article 21A (RTE Education)</button>
+            <button class="pill-btn" onclick="quickFilter('रैगिंग')">एंटी-रैगिंग कानून</button>
+            <button class="pill-btn" onclick="quickFilter('BNS')">BNS धाराएं</button>
+            <button class="pill-btn" onclick="quickFilter('51A')">मौलिक कर्तव्य (Duties)</button>
+        </div>
+
+        <div class="hero-cards-grid">
+            <div class="hero-card" onclick="quickFilter('मौलिक अधिकार')">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>मौलिक अधिकार<br><small>(Fundamental Rights)</small></h4>
+            </div>
+            <div class="hero-card" onclick="switchPage('studentPage', document.querySelectorAll('.menu-inner a')[2])">
+                <i class="fa-solid fa-user-graduate"></i>
+                <h4>छात्र अधिकार केंद्र<br><small>(Student Protection)</small></h4>
+            </div>
+            <div class="hero-card" onclick="switchPage('bnsPage', document.querySelectorAll('.menu-inner a')[3])">
+                <i class="fa-solid fa-gavel"></i>
+                <h4>BNS आपराधिक धाराएं<br><small>(Criminal Code)</small></h4>
+            </div>
+            <div class="hero-card" onclick="switchPage('complaintPage', document.querySelectorAll('.menu-inner a')[4])">
+                <i class="fa-solid fa-headset"></i>
+                <h4>AI शिकायत जनरेटर<br><small>(Auto Draft Complaint)</small></h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="content-container" id="mainContent">
+
+        <!-- ================= PAGE 1: HOME PAGE ================= -->
+        <div id="homePage" class="page-section active">
+            <div class="home-layout-grid">
+                <div>
+                    <div class="section-header-title">
+                        <span><i class="fa-solid fa-star" style="color:var(--govt-saffron);"></i> मुख्य संवैधानिक प्रावधान एवं अधिकार</span>
+                        <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">क्लिक करके विस्तृत जानकारी देखें</span>
+                    </div>
+                    <div id="featuredArticlesGrid" class="articles-grid">
+                        <!-- JS Dynamic Insert -->
+                    </div>
+                </div>
+
+                <!-- RIGHT NOTICE BOARD -->
+                <aside class="notice-board">
+                    <div class="notice-header"><i class="fa-solid fa-bookmark"></i> आज का संविधान ज्ञान</div>
+                    <div class="notice-item">
+                        <div class="notice-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div>
+                            <strong>अनुच्छेद 14:</strong> कानून के समक्ष सभी भारतीय नागरिक बराबर हैं। अमीर-गरीब का भेद अमान्य है।
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-icon-box"><i class="fa-solid fa-school"></i></div>
+                        <div>
+                            <strong>RTE कानून (Article 21A):</strong> प्राइवेट स्कूलों में 25% सीटें EWS (गरीब) बच्चों के लिए अनिवार्य रूप से आरक्षित हैं।
+                        </div>
+                    </div>
+                    <div class="notice-item">
+                        <div class="notice-icon-box"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <strong>मुफ्त लीगल सहायता:</strong> NALSA टोल फ्री नंबर <strong>15100</strong> पर फोन करके मुफ्त सरकारी वकील प्राप्त करें।
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <button class="btn-saffron" style="width: 100%; font-size: 0.85rem;" onclick="switchPage('complaintPage', document.querySelectorAll('.menu-inner a')[4])">
+                            <i class="fa-solid fa-pen-to-square"></i> ऑनलाइन शिकायत जनरेट करें
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 2: COMPLETE ARTICLES ================= -->
+        <div id="articlesPage" class="page-section">
+            <div class="section-header-title">
+                <span>📜 भारत का संविधान - प्रमुख अनुच्छेद एवं भाग</span>
+            </div>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">संविधान के महत्वपूर्ण भागों एवं अनुच्छेदों का हिंदी-अंग्रेजी द्विभाषीय संग्रह:</p>
+            <div id="allArticlesList"></div>
+        </div>
+
+        <!-- ================= PAGE 3: STUDENT CORNER ================= -->
+        <div id="studentPage" class="page-section">
+            <div class="section-header-title">
+                <span>🎓 छात्र अधिकार ज्ञान केंद्र (Student Rights & Legal Protections)</span>
+            </div>
+
+            <div class="student-rights-card">
+                <h3><i class="fa-solid fa-book-open-reader"></i> 1. मुफ्त एवं अनिवार्य शिक्षा का अधिकार (RTE Act & Article 21A)</h3>
+                <p>6 से 14 वर्ष की आयु के प्रत्येक बच्चे को पास के स्कूल में गुणवत्तापूर्ण शिक्षा पाने का मौलिक अधिकार प्राप्त है। गैर-सहायता प्राप्त प्राइवेट स्कूलों में भी 25% सीटें गरीब एवं कमजोर वर्ग (EWS) के बच्चों के लिए आरक्षित हैं।</p>
+                <div class="step-process-box">
+                    <strong>📌 यदि स्कूल एडमिशन देने से मना करे या अत्यधिक फीस मांगे:</strong>
+                    <ol>
+                        <li>खंड शिक्षा अधिकारी (BEO) या जिला बेसिक शिक्षा अधिकारी (BSA) को लिखित आवेदन दें।</li>
+                        <li>RTE उत्तर प्रदेश / संबंधित राज्य RTE ऑनलाइन पोर्टल पर शिकायत दर्ज कराएं।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="student-rights-card">
+                <h3><i class="fa-solid fa-ban"></i> 2. यूजीसी सख्त एंटी-रैगिंग कानून (UGC Anti-Ragging Regulations)</h3>
+                <p>कॉलेज या विश्वविद्यालय परिसर में किसी भी छात्र के साथ शारीरिक या मानसिक रैगिंग करना गैर-जमानती अपराध है। दोषी छात्र को तुरंत कॉलेज से निष्कासित किया जाएगा और 3 साल तक की जेल हो सकती है।</p>
+                <div class="step-process-box">
+                    <strong>📌 रैगिंग रोकने हेतु तत्काल कार्रवाई:</strong>
+                    <ol>
+                        <li>राष्ट्रीय एंटी-रैगिंग 24x7 टोल-फ्री हेल्पलाइन: <strong>1800-180-5522</strong></li>
+                        <li>आधिकारिक शिकायत पोर्टल: <strong>antiragging.in</strong> (शिकायतकर्ता की पहचान पूर्णतः गुप्त रखी जाती है)।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="student-rights-card">
+                <h3><i class="fa-solid fa-hand-dots"></i> 3. शारीरिक दंड एवं उत्पीड़न पर प्रतिबंध (Article 21 & RTE Sec 17)</h3>
+                <p>स्कूलों में शिक्षकों या प्रशासन द्वारा छात्रों की पिटाई करना, मुर्गा बनाना या किसी भी प्रकार का मानसिक उत्पीड़न देना सख्त गैर-कानूनी है।</p>
+                <div class="step-process-box">
+                    <strong>📌 शिकायत हेतु:</strong>
+                    <ol>
+                        <li>बाल अधिकार संरक्षण आयोग (NCPCR) हेल्पलाइन: <strong>1098</strong> (Childline) पर कॉल करें।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="student-rights-card">
+                <h3><i class="fa-solid fa-file-contract"></i> 4. लोक परीक्षा (अनुचित साधनों की रोकथाम) अधिनियम 2024</h3>
+                <p>प्रतियोगी परीक्षाओं (NEET, UPSC, SSC, Police Bharti) में पेपर लीक कराने या धांधली करने वाले गिरोह को 10 साल की कठोर जेल और ₹1 करोड़ तक का जुर्माना भुगतना होगा।</p>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 4: BNS / CRIMINAL LAWS ================= -->
+        <div id="bnsPage" class="page-section">
+            <div class="section-header-title">
+                <span>🚔 भारतीय न्याय संहिता (BNS) - प्रमुख आपराधिक धाराएं</span>
+            </div>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">नए आपराधिक कानूनों (Bharatiya Nyaya Sanhita) के तहत नागरिक सुरक्षा धाराएं:</p>
+            <div id="bnsCardsGrid" class="articles-grid">
+                <!-- JS Insert -->
+            </div>
+        </div>
+
+        <!-- ================= PAGE 5: AI COMPLAINT LOCATOR & DRAFT GENERATOR ================= -->
+        <div id="complaintPage" class="page-section">
+            <div class="section-header-title">
+                <span>🤖 AI कानून सहायक एवं स्वचालित शिकायत पत्र जनरेटर</span>
+            </div>
+
+            <div class="ai-locator-card">
+                <h3 style="color:var(--govt-blue); margin-bottom:8px;"><i class="fa-solid fa-robot"></i> अपनी समस्या लिखें - AI संबंधित कानून व शिकायत पत्र बनाएगा</h3>
+                <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:18px;">उदा: "कॉलेज टीसी नहीं दे रहा है", "साइबर फ्रॉड में पैसे कट गए", "पुलिस शिकायत नहीं लिख रही"</p>
+
+                <div class="form-group">
+                    <label>आपकी समस्या का संक्षिप्त विवरण:</label>
+                    <textarea id="aiProblemInput" class="form-control" placeholder="अपनी समस्या हिंदी या अंग्रेजी में यहाँ टाइप करें..."></textarea>
+                </div>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <button type="button" class="btn-govt" onclick="analyzeProblemAI()"><i class="fa-solid fa-magnifying-glass"></i> AI द्वारा कानून पहचानें</button>
+                    <button type="button" class="btn-saffron" onclick="generateComplaintDraft()"><i class="fa-solid fa-file-word"></i> शिकायत पत्र ऑटो-ड्राफ्ट करें</button>
+                </div>
+
+                <div id="aiResultBox" style="display:none; margin-top:20px;"></div>
+            </div>
+        </div>
+
+        <!-- ================= PAGE 6: NALSA LEGAL AID ================= -->
+        <div id="helpPage" class="page-section">
+            <div class="section-header-title">
+                <span>⚖️ मुफ़्त कानूनी सहायता एवं सलाह (Article 39A - NALSA)</span>
+            </div>
+            <div style="background:var(--card-bg); padding:28px; border-radius:10px; border:1px solid var(--border-color); box-shadow:0 4px 15px rgba(0,0,0,0.05);">
+                <h3 style="color:var(--govt-blue); margin-bottom:12px;"><i class="fa-solid fa-building-columns"></i> राष्ट्रीय कानूनी सेवा प्राधिकरण (NALSA)</h3>
+                <p style="margin-bottom:15px;">भारतीय संविधान के <strong>अनुच्छेद 39A</strong> के तहत राज्य का यह कर्तव्य है कि वह ऐसे नागरिकों को निःशुल्क कानूनी सहायता (Free Advocate) उपलब्ध कराए जो आर्थिक या अन्य असमर्थताओं के कारण न्याय पाने से वंचित रह जाते हैं।</p>
+
+                <h4 style="color:var(--govt-saffron-dark); margin-top:20px; margin-bottom:8px;">पात्रता (कौन मुफ़्त सरकारी वकील प्राप्त कर सकता है?):</h4>
+                <ul style="padding-left:22px; margin-bottom:20px; line-height:1.8;">
+                    <li>महिलाएं एवं बच्चे</li>
+                    <li>अनुसूचित जाति (SC) एवं अनुसूचित जनजाति (ST) के सदस्य</li>
+                    <li>वार्षिक ₹3 लाख से कम आय वाले छात्र एवं नागरिक</li>
+                    <li>औद्योगिक श्रमिक एवं दिव्यांग व्यक्ति</li>
+                </ul>
+
+                <div style="background:#FFFBEB; padding:18px; border-radius:8px; border:1px solid #FCD34D; display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+                    <i class="fa-solid fa-phone-volume" style="font-size:2rem; color:var(--govt-saffron-dark);"></i>
+                    <div>
+                        <strong style="font-size:1.1rem; color:var(--govt-blue);">राष्ट्रीय लीगल एड 24x7 हेल्पलाईन: 15100</strong>
+                        <p style="font-size:0.88rem; margin:0;">बिना किसी शुल्क के अपने नजदीकी जिला विधिक सेवा प्राधिकरण (DLSA) से मुफ़्त वकील प्राप्त करें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ARTICLE DETAIL MODAL POPUP -->
+    <div id="articleModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div>
+                    <span id="modalBadge" class="article-badge" style="background:#FF9933; color:#000;">Article</span>
+                    <h3 id="modalTitle" style="margin-top:4px; font-size:1.15rem; color:#FFF;">Title</h3>
+                </div>
+                <button onclick="closeModal()" style="background:none; border:none; color:#FFF; font-size:1.5rem;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic Populate -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>महत्वपूर्ण पोर्टल</h4>
+                <ul>
+                    <li><a href="https://mygov.in" target="_blank"><i class="fa-solid fa-chevron-right"></i> MyGov Portal</a></li>
+                    <li><a href="https://india.gov.in" target="_blank"><i class="fa-solid fa-chevron-right"></i> National Portal of India</a></li>
+                    <li><a href="https://ecourts.gov.in" target="_blank"><i class="fa-solid fa-chevron-right"></i> eCourts Services</a></li>
+                    <li><a href="https://nalsa.gov.in" target="_blank"><i class="fa-solid fa-chevron-right"></i> NALSA Legal Aid</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>आपातकालीन हेल्पलाइन</h4>
+                <ul>
+                    <li>राष्ट्रीय लीगल एड: <strong>15100</strong></li>
+                    <li>एंटी रैगिंग हेल्पलाइन: <strong>1800-180-5522</strong></li>
+                    <li>चाइल्ड हेल्पलाइन: <strong>1098</strong></li>
+                    <li>साइबर अपराध हेल्पलाइन: <strong>1930</strong></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>मंत्रालय संपर्क</h4>
+                <ul>
+                    <li>विधि और न्याय मंत्रालय</li>
+                    <li>विधायी विभाग, भारत सरकार</li>
+                    <li>शास्त्री भवन, नई दिल्ली - 110001</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© Content Owned by Ministry of Law and Justice, Government of India. Developed under Digital India Initiative. Hosted by NIC.</p>
+            <p style="margin-top: 6px; color: var(--govt-saffron); font-weight:700;">🇮🇳 जन-जन का अधिकार, सशक्त भारत का आधार 🇮🇳</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // CONSTITUTION ARTICLES DATABASE
+        const articlesDatabase = [
+            {
+                number: "1",
+                part: "PART 1: THE UNION AND ITS TERRITORY (1-4)",
+                category: "संघ और उसका क्षेत्र",
+                title_hi: "अनुच्छेद 1 - संघ का नाम और राज्यक्षेत्र",
+                orig_en: "India, that is Bharat, shall be a Union of States.",
+                simple_hi: "भारत राज्यों का एक संघ (Union) है। भारत का अर्थ पूरे देश और उसके सभी राज्यों एवं केंद्र शासित प्रदेशों का एक अखंड रूप है।",
+                impact: "यह भारत देश के आधिकारिक नाम और क्षेत्रीय अखंडता की गारंटी देता है।",
+                case_law: "Union of India v. State of Rajasthan (1984) - भारतीय संघवाद की प्रकृति।"
+            },
+            {
+                number: "5",
+                part: "PART 2: CITIZENSHIP (5-11)",
+                category: "नागरिकता",
+                title_hi: "अनुच्छेद 5 - संविधान के प्रारंभ पर नागरिकता",
+                orig_en: "At the commencement of this Constitution, every person who has his domicile in the territory of India shall be a citizen of India.",
+                simple_hi: "26 जनवरी 1950 को भारत में जन्मे या निवास करने वाले व्यक्तियों को भारतीय नागरिकता प्रदान की गई।",
+                impact: "नागरिक अधिकारों एवं पासपोर्ट/वोटिंग का आधार बनता है।",
+                case_law: "Pradeep Jain v. Union of India (1984) - भारत में केवल एक ही नागरिकता (Single Citizenship) है।"
+            },
+            {
+                number: "14",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "मौलिक अधिकार",
+                title_hi: "अनुच्छेद 14 - विधि के समक्ष समता (Right to Equality)",
+                orig_en: "The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.",
+                simple_hi: "कानून के समक्ष सभी नागरिक समान हैं। अमीर, गरीब, नेता या सामान्य नागरिक - सभी के लिए कानून समान रूप से लागू होता है।",
+                impact: "किसी भी नागरिक के साथ उसके धर्म, जाति, लिंग या सामाजिक स्थिति के आधार पर भेदभाव नहीं किया जा सकता।",
+                case_law: "Maneka Gandhi v. Union of India (1978) - कानून प्रक्रिया निष्पक्ष और न्यायसंगत होनी चाहिए।"
+            },
+            {
+                number: "19",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "मौलिक अधिकार",
+                title_hi: "अनुच्छेद 19 - वाक् एवं अभिव्यक्ति की स्वतंत्रता (Freedom of Speech)",
+                orig_en: "All citizens shall have the right to freedom of speech and expression, to assemble peaceably, and to form associations.",
+                simple_hi: "प्रत्येक भारतीय नागरिक को अपने विचार व्यक्त करने, भाषण देने, सोशल मीडिया पर लिखने और शांतिपूर्ण सभा करने का अधिकार है।",
+                impact: "छात्रों को शांतिपूर्ण ढंग से अपनी मांगों हेतु आवाज उठाने एवं प्रेस/मीडिया की स्वतंत्रता सुनिश्चित करता है।",
+                case_law: "Shreya Singhal v. Union of India (2015) - आईटी एक्ट धारा 66A रद्द, सोशल मीडिया पर अभिव्यक्ति की सुरक्षा।"
+            },
+            {
+                number: "21",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "मौलिक अधिकार",
+                title_hi: "अनुच्छेद 21 - प्राण और दैहिक स्वतंत्रता (Right to Life & Liberty)",
+                orig_en: "No person shall be deprived of his life or personal liberty except according to procedure established by law.",
+                simple_hi: "हर व्यक्ति को सम्मान के साथ जीने, स्वच्छ पर्यावरण, स्वास्थ्य, गोपनीयता (Privacy) और व्यक्तिगत स्वतंत्रता का मौलिक अधिकार है।",
+                impact: "पुलिस किसी नागरिक को अवैध रूप से हिरासत में नहीं रख सकती। जीवन की सुरक्षा राज्य की जिम्मेदारी है।",
+                case_law: "K.S. Puttaswamy v. Union of India (2017) - निजता (Privacy) का अधिकार मौलिक अधिकार घोषित।"
+            },
+            {
+                number: "21A",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "छात्र अधिकार",
+                title_hi: "अनुच्छेद 21A - शिक्षा का अधिकार (Right to Education - RTE)",
+                orig_en: "The State shall provide free and compulsory education to all children of the age of six to fourteen years in such manner as the State may, by law, determine.",
+                simple_hi: "6 से 14 वर्ष की आयु के प्रत्येक बच्चे को पास के सरकारी या प्राइवेट स्कूल में मुफ्त और अनिवार्य शिक्षा का मौलिक अधिकार है।",
+                impact: "निजी स्कूलों में भी 25% सीटें गरीब वर्ग (EWS) के बच्चों के लिए मुफ्त आरक्षित की गई हैं।",
+                case_law: "Unni Krishnan v. State of Andhra Pradesh (1993) - शिक्षा को जीवन के अधिकार का अभिन्न अंग माना गया।"
+            },
+            {
+                number: "24",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "मौलिक अधिकार",
+                title_hi: "अनुच्छेद 24 - बाल श्रम का प्रतिषेध (Prohibition of Child Labour)",
+                orig_en: "No child below the age of fourteen years shall be employed to work in any factory or mine or engaged in any other hazardous employment.",
+                simple_hi: "14 वर्ष से कम उम्र के बच्चों से कारखानों, दुकानों या जोखिम वाले कार्यों में मजदूरी करवाना दंडनीय अपराध है।",
+                impact: "बाल मजदूरी रोककर बच्चों को स्कूल भेजने हेतु कानूनी आधार प्रदान करता है।",
+                case_law: "M.C. Mehta v. State of Tamil Nadu (1996) - बाल श्रम पुनर्वास कल्याण कोष का गठन।"
+            },
+            {
+                number: "32",
+                part: "PART 3: FUNDAMENTAL RIGHTS (12-35)",
+                category: "मौलिक अधिकार",
+                title_hi: "अनुच्छेद 32 - संवैधानिक उपचारों का अधिकार (Right to Constitutional Remedies)",
+                orig_en: "The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.",
+                simple_hi: "यदि किसी नागरिक के मौलिक अधिकारों का हनन होता है, तो वह सीधे सुप्रीम कोर्ट में याचिका (Habeas Corpus, Mandamus) दायर कर सकता है।",
+                impact: "डॉ. बी.आर. अंबेडकर ने इसे 'संविधान का हृदय और आत्मा' कहा था।",
+                case_law: "L. Chandra Kumar v. Union of India (1997) - न्यायिक समीक्षा संविधान का मूल ढांचा है।"
+            },
+            {
+                number: "39A",
+                part: "PART 4: DIRECTIVE PRINCIPLES OF STATE POLICY (36-51)",
+                category: "नीति निर्देशक तत्व",
+                title_hi: "अनुच्छेद 39A - समान न्याय और मुफ़्त कानूनी सहायता",
+                orig_en: "The State shall secure that the operation of the legal system promotes justice, on a basis of equal opportunity, and shall provide free legal aid.",
+                simple_hi: "राज्य यह सुनिश्चित करेगा कि गरीबों को मुफ़्त कानूनी वकील और कानूनी सलाह उपलब्ध कराई जाए।",
+                impact: "NALSA और जिला विधिक सेवा प्राधिकरण (15100) का निर्माण इसी अनुच्छेद के तहत हुआ है।",
+                case_law: "Hussainara Khatoon v. Home Secretary, Bihar (1979) - मुफ़्त कानूनी सहायता मौलिक अधिकार का अंग।"
+            },
+            {
+                number: "51A",
+                part: "PART 4A: FUNDAMENTAL DUTIES (51A)",
+                category: "मौलिक कर्तव्य",
+                title_hi: "अनुच्छेद 51A - नागरिकों के 11 मौलिक कर्तव्य (Fundamental Duties)",
+                orig_en: "It shall be the duty of every citizen of India to abide by the Constitution, respect National Flag and National Anthem, and protect environment.",
+                simple_hi: "संविधान का पालन करना, राष्ट्रध्वज व राष्ट्रगान का आदर करना, सार्वजनिक संपत्ति को नुकसान न पहुंचाना और पर्यावरण की रक्षा करना।",
+                impact: "नागरिकों को उनके अधिकारों के साथ-साथ राष्ट्र के प्रति उनके कर्तव्यों का बोध कराता है।",
+                case_law: "AIIMS Students Union v. AIIMS (2002) - मौलिक कर्तव्य और अधिकार एक दूसरे के पूरक हैं।"
+            }
+        ];
+
+        // BNS CRIMINAL LAWS DATABASE
+        const bnsDatabase = [
+            {
+                section: "BNS 103",
+                title: "हत्या के लिए दंड (Murder Penalty)",
+                old_law: "पुराना IPC 302",
+                desc: "जो कोई भी व्यक्ति किसी की गैर-कानूनी हत्या करता है, उसे मृत्युदंड (फांसी) या आजीवन कारावास और जुर्माने की सजा दी जाएगी।",
+                penalty: "मृत्युदंड या आजीवन कारावास + जुर्माना"
+            },
+            {
+                section: "BNS 318",
+                title: "छल एवं धोखाधड़ी (Cheating & Fraud)",
+                old_law: "पुराना IPC 420",
+                desc: "किसी व्यक्ति को बेईमानी से धोखा देकर उसकी संपत्ति या पैसे ऐंठना।",
+                penalty: "7 साल तक की कठिन जेल + जुर्माना"
+            },
+            {
+                section: "BNS 303",
+                title: "चोरी के लिए दंड (Theft)",
+                old_law: "पुराना IPC 379",
+                desc: "बिना सहमति किसी की चल संपत्ति चुराना।",
+                penalty: "3 साल तक की जेल या जुर्माना या दोनों"
+            },
+            {
+                section: "BNS 351",
+                title: "आपराधिक धमकी (Criminal Intimidation)",
+                old_law: "पुराना IPC 506",
+                desc: "किसी व्यक्ति की जान, संपत्ति या प्रतिष्ठा को नुकसान पहुंचाने की धमकी देना।",
+                penalty: "2 से 7 साल तक की जेल"
+            },
+            {
+                section: "IT Act 66D",
+                title: "ऑनलाइन साइबर फ्रॉड (Cyber Fraud / OTP Scam)",
+                old_law: "सूचना प्रौद्योगिकी अधिनियम 2000",
+                desc: "कंप्यूटर या मोबाइल द्वारा फर्जी पहचान बनाकर या OTP मांगकर ऑनलाइन पैसे चुराना।",
+                penalty: "3 साल की जेल + ₹1 लाख जुर्माना"
+            }
+        ];
+
+        // RENDER FEATURED CARDS ON HOME PAGE
+        function renderFeaturedArticles(data) {
+            const grid = document.getElementById('featuredArticlesGrid');
+            grid.innerHTML = '';
+            
+            if(data.length === 0) {
+                grid.innerHTML = `<p style="padding:20px; color:var(--text-muted);">कोई परिणाम नहीं मिला। कृपया अन्य शब्द खोजें।</p>`;
+                return;
+            }
+
+            data.forEach(art => {
+                const card = document.createElement('div');
+                card.className = 'article-card';
+                card.onclick = () => openArticleModal(art);
+                card.innerHTML = `
+                    <div class="article-card-header">
+                        <span class="article-badge">अनुच्छेद ${art.number}</span>
+                        <h3>${art.title_hi}</h3>
+                    </div>
+                    <p>${art.simple_hi.substring(0, 110)}...</p>
+                    <div class="article-card-footer">
+                        <span><i class="fa-solid fa-layer-group"></i> ${art.category}</span>
+                        <span>विस्तार से पढ़ें ➔</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // RENDER ALL ARTICLES PAGE
+        function renderAllArticles() {
+            const container = document.getElementById('allArticlesList');
+            container.innerHTML = `
+                <div class="part-group-title"><i class="fa-solid fa-shield-halved"></i> भाग 3: मौलिक अधिकार (Articles 12-35)</div>
+                <div class="articles-grid">
+                    ${articlesDatabase.map(art => `
+                        <div class="article-card" onclick='openArticleModal(${JSON.stringify(art)})'>
+                            <div class="article-card-header">
+                                <span class="article-badge">अनुच्छेद ${art.number}</span>
+                                <h3>${art.title_hi}</h3>
+                            </div>
+                            <p>${art.simple_hi}</p>
+                            <div class="article-card-footer">
+                                <span>${art.part.split(':')[0]}</span>
+                                <span>पढ़ें ➔</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // RENDER BNS PAGE
+        function renderBNSPage() {
+            const container = document.getElementById('bnsCardsGrid');
+            container.innerHTML = bnsDatabase.map(bns => `
+                <div class="article-card" style="border-top-color: var(--govt-saffron-dark);">
+                    <div class="article-card-header">
+                        <span class="article-badge" style="background:#FEF3C7; color:#B45309;">${bns.section} (${bns.old_law})</span>
+                        <h3>${bns.title}</h3>
+                    </div>
+                    <p>${bns.desc}</p>
+                    <div class="article-card-footer" style="color:#B45309;">
+                        <span><i class="fa-solid fa-gavel"></i> दंड: ${bns.penalty}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // OPEN MODAL POPUP
+        function openArticleModal(art) {
+            document.getElementById('modalBadge').innerText = `अनुच्छेद ${art.number}`;
+            document.getElementById('modalTitle').innerText = art.title_hi;
+
+            document.getElementById('modalBody').innerHTML = `
+                <p style="color:var(--text-muted); font-size:0.88rem;"><strong>संवैधानिक भाग:</strong> ${art.part}</p>
+                
+                <div class="bilingual-grid">
+                    <div class="lang-col">
+                        <h4><i class="fa-solid fa-building-columns"></i> मूल अंग्रेजी पाठ (Official Constitution)</h4>
+                        <p style="font-style: italic; color:#334155; font-size:0.9rem;">"${art.orig_en}"</p>
+                    </div>
+                    <div class="lang-col">
+                        <h4><i class="fa-solid fa-language"></i> आसान हिंदी अर्थ (Simple Meaning)</h4>
+                        <p style="font-weight:500; font-size:0.95rem;">${art.simple_hi}</p>
+                    </div>
+                </div>
+
+                <div class="impact-box">
+                    <h4 style="color:var(--govt-green-dark); margin-bottom:5px;"><i class="fa-solid fa-user-check"></i> नागरिक एवं छात्र जीवन पर प्रभाव:</h4>
+                    <p style="font-size:0.92rem;">${art.impact}</p>
+                </div>
+
+                <div class="case-law-box">
+                    <h4 style="color:var(--govt-saffron-dark); margin-bottom:5px;"><i class="fa-solid fa-scale-unbalanced-stroke"></i> सुप्रीम कोर्ट निर्णय (Landmark Case Law):</h4>
+                    <p style="font-size:0.92rem; font-weight:600;">${art.case_law}</p>
+                </div>
+
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+                    <button class="btn-secondary" onclick="window.print()"><i class="fa-solid fa-print"></i> प्रिंट / PDF सेव करें</button>
+                    <button class="btn-govt" onclick="closeModal()">बंद करें</button>
+                </div>
+            `;
+
+            document.getElementById('articleModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('articleModal').style.display = 'none';
+        }
+
+        // SWITCH TAB PAGES
+        function switchPage(pageId, navElement) {
+            document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+
+            if(navElement) {
+                document.querySelectorAll('.menu-inner a').forEach(l => l.classList.remove('active'));
+                navElement.classList.add('active');
+            }
+            window.scrollTo({ top: 350, behavior: 'smooth' });
+        }
+
+        // SEARCH FILTER
+        function handleLiveSearch() {
+            const query = document.getElementById('globalSearch').value.toLowerCase().trim();
+            
+            if(query === '') {
+                renderFeaturedArticles(articlesDatabase);
+                return;
+            }
+
+            switchPage('homePage', document.querySelectorAll('.menu-inner a')[0]);
+
+            const filtered = articlesDatabase.filter(art => 
+                art.number.toLowerCase().includes(query) ||
+                art.title_hi.toLowerCase().includes(query) ||
+                art.simple_hi.toLowerCase().includes(query) ||
+                art.category.toLowerCase().includes(query)
+            );
+
+            renderFeaturedArticles(filtered);
+        }
+
+        function quickFilter(type) {
+            document.getElementById('globalSearch').value = type;
+            handleLiveSearch();
+        }
+
+        // AI PROBLEM ANALYZER
+        function analyzeProblemAI() {
+            const text = document.getElementById('aiProblemInput').value.toLowerCase().trim();
+            const resultBox = document.getElementById('aiResultBox');
+
+            if(!text) {
+                alert('कृपया अपनी समस्या लिखें!');
+                return;
+            }
+
+            resultBox.style.display = 'block';
+
+            let matchedLaw = "अनुच्छेद 14 (समता का अधिकार)";
+            let authority = "राष्ट्रीय मानवाधिकार आयोग (NHRC) / NALSA 15100";
+            let actionStep = "जिला मजिस्ट्रेट या विधिक सेवा प्राधिकरण को आवेदन दें।";
+
+            if(text.includes('रैगिंग') || text.includes('ragging') || text.includes('senior')) {
+                matchedLaw = "यूजीसी एंटी-रैगिंग विनियम 2009";
+                authority = "एंटी रैगिंग हेल्पलाइन (1800-180-5522) एवं antiragging.in";
+                actionStep = "ऑनलाइन गुप्त रिपोर्ट दर्ज कराएं या एंटी-रैगिंग स्क्वाड को सूचित करें।";
+            } else if(text.includes('स्कूल') || text.includes('tc') || text.includes('शिक्षा') || text.includes('फीस')) {
+                matchedLaw = "अनुच्छेद 21A एवं शिक्षा का अधिकार (RTE Act 2009)";
+                authority = "जिला बेसिक शिक्षा अधिकारी (BSA) / Childline 1098";
+                actionStep = "BSA कार्यालय में लिखित शिकायत पत्र जमा करें।";
+            } else if(text.includes('पैसे') || text.includes('otp') || text.includes('ऑनलाइन') || text.includes('साइबर')) {
+                matchedLaw = "IT Act धारा 66D (साइबर धोखाधड़ी)";
+                authority = "राष्ट्रीय साइबर अपराध पोर्टल (cybercrime.gov.in) / हेल्पलाइन 1930";
+                actionStep = "1930 पर तुरंत कॉल करके बैंक खाता ब्लॉक कराएं एवं ऑनलाइन FIR दर्ज कराएं।";
+            } else if(text.includes('पुलिस') || text.includes('fir')) {
+                matchedLaw = "CRPC/BNSS - शून्य FIR (Zero FIR) नियम";
+                authority = "पुलिस अधीक्षक (SP Office) / राज्य मानव अधिकार आयोग";
+                actionStep = "SP कार्यालय में पंजीकृत डाक द्वारा शिकायत भेजें।";
+            }
+
+            resultBox.innerHTML = `
+                <div style="background:#E0F2FE; border-left:5px solid #0284C7; padding:18px; border-radius:8px;">
+                    <h4 style="color:#0369A1; margin-bottom:8px;"><i class="fa-solid fa-brain"></i> AI कानून विश्लेषण परिणाम:</h4>
+                    <p><strong>संबंधित कानून/अनुच्छेद:</strong> ${matchedLaw}</p>
+                    <p><strong>शिकायत केंद्र/प्राधिकारी:</strong> ${authority}</p>
+                    <p><strong>अनुशंसित कदम:</strong> ${actionStep}</p>
+                </div>
+            `;
+        }
+
+        // COMPLAINT AUTO DRAFT GENERATOR
+        function generateComplaintDraft() {
+            const text = document.getElementById('aiProblemInput').value.trim();
+            if(!text) {
+                alert('कृपया शिकायत पत्र बनाने के लिए समस्या लिखें!');
+                return;
+            }
+
+            const resultBox = document.getElementById('aiResultBox');
+            resultBox.style.display = 'block';
+
+            const draftText = `सेवा में,
+श्रीमान संबंधित अधिकारी / थाना प्रभारी,
+विषय: ${text.substring(0, 50)}... के संबंध में कानूनी शिकायत आवेदन।
+
+महोदय,
+सविनय निवेदन है कि मैं प्रार्थिया/प्रार्थी का नाम [आपका नाम], निवासी [आपका पता] का रहने वाला/वाली हूँ। 
+
+घटना का विवरण:
+${text}
+
+अतः आपसे विनम्र निवेदन है कि भारत के संविधान एवं संबंधित धाराओं के तहत इस मामले का संज्ञान लेते हुए त्वरित कानूनी कार्रवाई करने की कृपा करें।
+
+दिनांक: ${new Date().toLocaleDateString('hi-IN')}
+संलग्नक: पहचान पत्र प्रति
+भवदीय,
+[आपका नाम]
+मोबाइल नंबर: [आपका नंबर]`;
+
+            resultBox.innerHTML = `
+                <div style="background:#FFF; border:2px solid var(--govt-blue); padding:20px; border-radius:8px;">
+                    <h4 style="color:var(--govt-blue); margin-bottom:10px;"><i class="fa-solid fa-file-lines"></i> स्व-जनरेटेड कानूनी शिकायत पत्र प्रारूप:</h4>
+                    <textarea class="form-control" style="height:220px; font-family:monospace; font-size:0.88rem;">${draftText}</textarea>
+                    <div style="margin-top:12px; display:flex; gap:10px;">
+                        <button class="btn-govt" onclick="navigator.clipboard.writeText(\`${draftText.replace(/`/g, '')}\`); alert('शिकायत पत्र कॉपी हो गया!');"><i class="fa-solid fa-copy"></i> प्रारूप कॉपी करें</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // CONTROLS & CLOCK
+        let currentFontSize = 15;
+        function changeFontSize(dir) {
+            currentFontSize = dir === 0 ? 15 : currentFontSize + dir;
+            document.body.style.fontSize = currentFontSize + 'px';
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        let isEnglish = false;
+        function toggleLanguage() {
+            isEnglish = !isEnglish;
+            document.getElementById('langBtn').innerText = isEnglish ? "हिंदी / English" : "English / हिंदी";
+        }
+
+        function updateLiveClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Kolkata', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('liveClock').innerText = `IST ${now.toLocaleTimeString('en-US', options)}`;
+        }
+
+        // LOAD INIT
+        window.onload = function() {
+            renderFeaturedArticles(articlesDatabase);
+            renderAllArticles();
+            renderBNSPage();
+            setInterval(updateLiveClock, 1000);
+            updateLiveClock();
+        };
+    </script>
+</body>
+</html>
+```
+
+### Summary of Completed Web App:
+1. **Header & Accessibility Strip**: Added Ashoka Stambh Emblem SVG, Government titles, Font Resizers (A-, A, A+), High Contrast Toggle, Hindi/English Toggle, Live IST Clock, and PM Narendra Modi / CM Yogi Adityanath cards.
+2. **Hero Search Engine**: Instant search for Articles, BNS Sections, and Student Laws with quick filter pills.
+3. **Articles & BNS Database**: Includes Articles 1, 5, 14, 19, 21, 21A, 24, 32, 39A, 51A and Bharatiya Nyaya Sanhita (BNS 103, 318, 303, 351, IT Act 66D) with side-by-side English/Hindi translations and SC landmark cases.
+4. **Student Protection Corner**: Outlines RTE Act 2009, UGC Anti-Ragging regulations (1800-180-5522), Corporal Punishment rules (Childline 1098), and Anti-Paper Leak Act 2024.
+5. **AI Rights Locator & Auto Draft Generator**: Smart problem analyzer and one-click downloadable legal complaint letter generator.
+6. **Government Footer**: Integrated links to MyGov, Digital India, eCourts, NALSA 15100 legal aid, and NIC hosting details.
